@@ -1,4 +1,4 @@
-const {Examen} = require('../models/Examen');
+const {Examen} = require('../model');
 
 const getAll = async (req, res) => {
   try {

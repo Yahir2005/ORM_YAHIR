@@ -1,4 +1,4 @@
-const {tipoUsuario} = require('../models');
+const {tipoUsuario} = require('../model');
 
 const getAll = async (req, res) => {
   try {
