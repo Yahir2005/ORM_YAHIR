@@ -8,6 +8,11 @@ var { sequelize } = require('./src/model');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var categoriaRouter = require('./routes/categoria');
+var estudianteRouter = require('./routes/Estudiante');
+var examenRouter = require('./routes/Examen');
+var preguntaRouter = require('./routes/Pregunta');
+var tipoUsuarioRouter = require('./routes/TipoUsuario');
+var usuarioRouter = require('./routes/Usuario');
 
 var app = express();
 
@@ -24,6 +29,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/api/categorias', categoriaRouter);
+app.use('/api/Estudiante', estudianteRouter);
+app.use('/api/Examen', examenRouter);
+app.use('/api/Pregunta', preguntaRouter);
+app.use('/api/TipoUsuario', tipoUsuarioRouter);
+app.use('/api/Usuario', usuarioRouter);
+
 
 // Database connection
 sequelize.authenticate()
